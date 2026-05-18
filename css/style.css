@@ -549,6 +549,7 @@ footer {
     flex-wrap: wrap;
     padding: 20px 0px 0px 0px;
     gap: 20px;
+    justify-content: center;
 }
 
 .main-social-list_left{
