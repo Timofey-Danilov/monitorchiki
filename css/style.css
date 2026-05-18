@@ -519,8 +519,8 @@ footer {
 
 /* Внутренний контейнер */
 .social-card__body {
-    width: 550px;
-        display: flex;
+    min-width: 550px;
+    display: flex;
     justify-content: center;    
     background: white;
     border-radius: 12px;
@@ -546,10 +546,14 @@ footer {
 .main-social-list{
     display: flex;
     flex-direction: row;
-    padding: 20px 0px 0px 0px; 
+    flex-wrap: wrap;
+    padding: 20px 0px 0px 0px;
+    gap: 20px;
 }
 
 .main-social-list_left{
+    max-width: 770px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -559,11 +563,12 @@ footer {
     border-radius: 12px;
     padding: 0px;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
+    padding: 10px;
 }
 
 .social-list{
-    width: 750px;
-    padding: 0px 30px 0px 50px;
+    width: 100%;
+    max-width: 550px;
 }
 
 @media (max-width: 1275px) {
@@ -704,6 +709,21 @@ footer {
     .card-1_div_img {
         padding: 0 0 30px 0;
     }
+
+    .main-social-list_left {
+        width: 100%;
+        max-width: 75%;
+    }
+    .main-social-list {
+        align-items: center;
+        justify-content: center;
+    }
+    .social-list {
+        max-width: 75%;
+    }
+    .social-card__body {
+        min-width: 0;
+    }
 }
 
 @media (max-width: 678px) {
@@ -744,16 +764,7 @@ footer {
     .main-social-list {
         flex-direction: column;
         gap: 30px;
-    }
-
-    .main-social-list_left {
-        width: 100%;
-    }
-
-    .socials {
-        flex-direction: column;
         align-items: center;
-        gap: 15px;
     }
 
     .blue-a {
@@ -762,11 +773,11 @@ footer {
         box-sizing: border-box;
     }
 
-    .green-orange,
+    /* .green-orange,
     .subscribe {
         width: 100%;
         object-fit: cover;
-    }
+    } */
 
     /* Прячем дублирующуюся картинку на мобильных, если нужно */
     .subscribe {
@@ -774,9 +785,9 @@ footer {
     }
 
     /* Если нужно спрятить одну из двух одинаковых картинок — раскомментировать */
-    /* .green-orange {
+    .green-orange, .subscribe {
         display: none;
-    } */
+    }
 
     .social-list {
         width: 100%;
