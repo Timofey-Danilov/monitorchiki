@@ -137,14 +137,14 @@
             e.preventDefault();
             jump();
         }
-        if (e.code === "ArrowDown" || e.code === "KeyS") {
+        if ( e.code === "KeyS" ||e.code === "ArrowDown") {
             e.preventDefault();
             duck(true);
         }
        });
    
        document.addEventListener("keyup", (e) => {
-           if (e.code === "ArrowDown") duck(false);
+           if (e.code === "ArrowDown" || e.code === "KeyS" ) duck(false);
        });
    
        function bruteForce() {
