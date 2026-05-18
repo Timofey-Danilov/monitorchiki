@@ -91,18 +91,37 @@
        }
    
        function restartGame() {
-           score1 = 0;
-           speed = 6;
-           gameRunning = true;
-           hackArray = new Array(password.length).fill("#");
-           hackIndex = 0;
-           charIndexArray = new Array(password.length).fill(0);
-           document.getElementById("hack").innerText = hackArray.join("");
-           document.getElementById("score").innerText = 0;
-           obstacles = [];
-           document.getElementById("restartBtn").style.display = "none";
-           log("🔄 Игра перезапущена!");
-       }
+        // Сброс переменных
+        score1 = 0;
+        speed = 6;
+        gameRunning = true;
+        hackArray = new Array(password.length).fill("#");
+        hackIndex = 0;
+        charIndexArray = new Array(password.length).fill(0);
+        
+        // Сброс динозавра
+        dino.y = 200;
+        dino.vy = 0;
+        dino.jump = false;
+        dino.duck = false;
+        
+        // Очистка препятствий
+        obstacles = [];
+        
+        // Обновление интерфейса
+        document.getElementById("hack").innerText = hackArray.join("");
+        document.getElementById("score").innerText = 0;
+        document.getElementById("restartBtn").style.display = "none";
+        
+        // Очистка лога
+        document.getElementById("log").innerHTML = "";
+        
+        log("🔄 Игра перезапущена!");
+        log("📏 Длина пароля: " + password.length);
+        
+        // Перезапуск игрового цикла
+        gameLoop();
+    }
    
        function resetGame() {
            location.reload();
