@@ -8,7 +8,7 @@ let isAnimating = false;
 function updateSlideWidth() {
 const firstSlide = track.querySelector('.slide');
 if (firstSlide) {
-    slideWidth = firstSlide.offsetWidth;
+    slideWidth = firstSlide.getBoundingClientRect().width;
 }
 }
 
@@ -21,6 +21,7 @@ window.addEventListener('resize', updateSlideWidth);
 function moveNext() {
 if (isAnimating) return;
 isAnimating = true;
+updateSlideWidth();
 
 track.style.transition = 'transform 0.3s ease';
 track.style.transform = `translateX(-${slideWidth}px)`;
@@ -49,6 +50,7 @@ track.addEventListener('transitionend', onTransitionEnd);
 function movePrev() {
 if (isAnimating) return;
 isAnimating = true;
+updateSlideWidth();
 
 // моментально переносим последний слайд в начало
 track.style.transition = 'none';
