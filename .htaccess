@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect only explicit requests for /index.html. THE_REQUEST prevents a
+# redirect loop when Apache serves index.html internally for the site root.
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://monitorchiki.ru/ [R=301,L,NE]
+
+# Keep one canonical hostname while preserving the requested path and query.
+RewriteCond %{HTTP_HOST} ^www\.monitorchiki\.ru$ [NC]
+RewriteRule ^ https://monitorchiki.ru%{REQUEST_URI} [R=301,L,NE]
