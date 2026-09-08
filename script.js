@@ -1,14 +1,66 @@
-document.querySelector('.burger').addEventListener('click', function () {
-    this.classList.toggle('active');
-    document.querySelector('.navigation').classList.toggle('open');
-});
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.navigation');
+const mobileNavigation = window.matchMedia('(max-width: 1275px)');
+const dropdownTriggers = [];
 
-document.querySelectorAll('.navigation a').forEach((item) => {
-    item.addEventListener('click', () => {
-        document.querySelector('.burger').classList.remove('active');
-        document.querySelector('.navigation').classList.remove('open');
+const closeDropdowns = () => {
+    dropdownTriggers.forEach(({ dropdown, trigger }) => {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+    });
+};
+
+document.querySelectorAll('.navigation .dropdown').forEach((dropdown) => {
+    const trigger = dropdown.querySelector('.spesical');
+
+    if (!trigger) {
+        return;
+    }
+
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('tabindex', '0');
+    trigger.setAttribute('aria-expanded', 'false');
+    dropdownTriggers.push({ dropdown, trigger });
+
+    const toggleDropdown = () => {
+        const isOpen = dropdown.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    trigger.addEventListener('click', () => {
+        if (mobileNavigation.matches) {
+            toggleDropdown();
+        }
+    });
+
+    trigger.addEventListener('keydown', (event) => {
+        if (mobileNavigation.matches && (event.key === 'Enter' || event.key === ' ')) {
+            event.preventDefault();
+            toggleDropdown();
+        }
     });
 });
+
+if (burger && navigation) {
+    burger.addEventListener('click', function () {
+        const isOpen = navigation.classList.toggle('open');
+        this.classList.toggle('active', isOpen);
+
+        if (!isOpen) {
+            closeDropdowns();
+        }
+    });
+
+    document.querySelectorAll('.navigation a').forEach((item) => {
+        item.addEventListener('click', () => {
+            burger.classList.remove('active');
+            navigation.classList.remove('open');
+            closeDropdowns();
+        });
+    });
+}
+
+mobileNavigation.addEventListener('change', closeDropdowns);
 
 document.querySelectorAll('dialog[id^="modal"]').forEach((modal) => {
     const number = modal.id.replace('modal', '');
