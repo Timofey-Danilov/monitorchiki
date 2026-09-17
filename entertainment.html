@@ -3,277 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игры об интернет-безопасности — Мониторчики</title>
-    <meta name="description" content="Викторина, раскраски, обучающие игры и материалы для педагогов, которые помогают детям освоить правила безопасного поведения в интернете.">
+    <title>Игры и занятия об интернет-безопасности — Мониторчики</title>
+    <meta name="description" content="Викторина, интерактивные и скачиваемые игры, раскраски и готовые материалы для уроков цифровой безопасности.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://monitorchiki.ru/entertainment.html">
-    <meta property="og:locale" content="ru_RU">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Мониторчики">
-    <meta property="og:title" content="Игры об интернет-безопасности — Мониторчики">
-    <meta property="og:description" content="Викторина, раскраски и обучающие игры о безопасном поведении в интернете.">
-    <meta property="og:url" content="https://monitorchiki.ru/entertainment.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Игры об интернет-безопасности — Мониторчики">
-    <meta name="twitter:description" content="Викторина, раскраски и обучающие игры о безопасном поведении в интернете.">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/quiz.css">
-    <link rel="stylesheet" href="./css/dino.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <meta property="og:locale" content="ru_RU"><meta property="og:type" content="website"><meta property="og:site_name" content="Мониторчики">
+    <meta property="og:title" content="Игры и занятия об интернет-безопасности — Мониторчики"><meta property="og:description" content="Интерактивные задания и готовые материалы для детей и педагогов."><meta property="og:url" content="https://monitorchiki.ru/entertainment.html"><meta property="og:image" content="https://monitorchiki.ru/img/game-2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/quiz.css"><link rel="stylesheet" href="./css/dino.css"><link rel="stylesheet" href="./css/activity.css">
 </head>
-<body>
-    <header>
-        <div class="container header">
-            <div>
-                <p class="site-title white">Мониторчики</p>
-                <p class="p-16 white">Детское электронное издание</p>
-            </div>
-            <nav class="navigation">
-                <div>
-                    <a class="p-26 white" href="/">О нас</a>
-                </div>
-                <div class="dropdown">
-                    <p class="p-26 white spesical" >Полезные материалы</p>
-                    <ul class="dropdown-list">
-                        <li><a href="forParents.html">Для родителей</a></li>
-                        <li><a href="materials.html">Для детей</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="p-26 white" href="./entertainment.html">Развлечения</a>
-                </div>
-            </nav>
-            <div class="burger">
-                <span></span>
-            </div>
+<body class="activity-page">
+    <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/" aria-label="Мониторчики — главная страница"><span class="brand__mark" aria-hidden="true">М</span><span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span></a>
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+            <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация"><a href="./materials.html">Детям</a><a href="./forParents.html">Родителям</a><a href="#teachers">Педагогам</a><a class="is-current" href="./entertainment.html" aria-current="page">Игры</a><a href="./#about">О проекте</a></nav>
         </div>
     </header>
-    <main class="container">
-        <section class="start">
-            <div>
-                <h1 class="orange">Играй и узнавай новое</h1>
-                <p class="p-24 green">Здесь ты найдёшь викторину, раскраски и игры, которые не только помогут весело провести время, но и освоить интернет-грамотность</p>
-            </div>
-            <video class="head-img big" preload="metadata" loop autoplay muted playsinline poster="">
-                <source src="./video/orange_music.mp4" type="video/webm">
-            </video>
-        </section>
-        <section class="quiz-hero">
-            <h2 class="orange">Викторина по безопасности 🛡️</h2>
-            <p class="p-24 green">Проверь свои знания об интернет-безопасности!</p>
-        </section>
-        <section>
-            <div class="quiz-meta">
-                <span class="green">Вопрос <span id="q-num">1</span> из <span id="q-total">10</span></span>
-                <span class="orange bold">Очки: <span id="score-now">0</span></span>
-            </div>
-            <div class="progress-track">
-                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-            </div>
-            <div id="quiz-screen">
-                <div class="question-card" id="question-card">
-                    <div class="question-category" id="q-category">Категория</div>
-                    <div class="question-text" id="q-text">Текст вопроса...</div>
-                    <div class="answers-grid" id="answers-grid"></div>
-                    <div id="feedback">
-                        <span id="feedback-icon"></span><span id="feedback-text"></span>
-                        <div id="feedback-hint"></div>
-                    </div>
-                    <button id="next-btn">Следующий вопрос →</button>
-                </div>
-            </div>
-            <div id="result-screen">
-                <div class="result-card">
-                    <div class="result-emoji" id="result-emoji">🏆</div>
-                    <h2 class="purple" id="result-title">Молодец!</h2>
-                    <div class="result-score-big">
-                        <span id="final-score">0</span><span> / <span id="final-total">10</span></span>
-                    </div>
-                    <p class="result-msg" id="result-msg">Отличный результат!</p>
-                    <button id="retry-btn" onclick="restartQuiz()">🔄 Пройти ещё раз</button>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Раскраски</h2>
-            <div class="coloring-slider">
-                <button class="slider-btn slider-btn--prev">‹</button>
-                <div class="slider-window">
-                    <ul class="slider-track">
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-1.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-1.jpg" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-1.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-2.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-2.jpg" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-2.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-3.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-3.jpg" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-3.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-4.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-4.png" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-4.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-5.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-5.png" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-5.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                        <li class="coloration-li slide">
-                            <a download href="./download/pdf/draw-6.pdf">
-                                <img class="coloration-li-img" src="./download/img/draw-6.png" alt="">
-                            </a>
-                            <a class="underline_none p-20 black" download href="./download/pdf/draw-6.pdf">
-                                <p>Скачать ⤓</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <button class="slider-btn slider-btn--next">›</button>
+
+    <main id="main-content">
+        <section class="activity-hero">
+            <div class="container activity-hero__grid">
+                <div><p class="eyebrow">Учимся через практику</p><h1>Играй, исследуй и запоминай</h1><p>Викторины и задания помогают применить правила цифровой безопасности в ситуациях, похожих на настоящие.</p><div class="hero__actions"><a class="button button--primary" href="#quiz">Начать с викторины</a><a class="button button--secondary" href="#teachers">Материалы педагогам</a></div></div>
+                <div class="activity-hero__visual"><video preload="metadata" loop autoplay muted playsinline aria-label="Анимация персонажа Мониторчиков"><source src="./video/orange_music.mp4" type="video/mp4"></video></div>
             </div>
         </section>
 
-        <section class="game-section">
-            <div class="game-container" id="gameContainer">
-                <button class="fullscreen-btn" onclick="toggleFullscreen()">🎮 На весь экран 🎮</button>
-                <div class="game-wrapper" id="gameWrapper">
-                    <div id="startScreen">
-                        <h3>🔐 "Просто плашку поставить"</h3>
-                        <h5>Успеете ли вы пройти игру до того как хакер подберёт ваш пароль?</h5>
-                        <h5>Самое время узнать!</h5>
-                        <br>
-                        <h4>Введите пароль</h4>
-                        <input id="passwordInput" type="text" placeholder="Придумайте пароль">
-                        <br><br>
-                        <button onclick="startGame()">Начать игру</button>
-                        <br><br>
-                        <h5>⬆️ Пробел - прыжок, ⬇️ Стрелка вниз - пригнуться</h5>
-                        <h5>🎮 Нажмите на область игры для управления</h5>
-                    </div>
-    
-                    <div id="terminal" style="display:none;">
-                        Пароль: <span id="password"></span><br>
-                        Подбор: <span id="hack"></span><br>
-                        Очки: <span id="score">0</span>
-                        <div id="log"></div>
-                    </div>
-    
-                    <canvas id="game" style="display:none;"></canvas>
-    
-                    <div id="gameControls" style="display:none;">
-                        <button onclick="jump()">⬆️ Прыжок</button>
-                        <button onmousedown="duck(true)" onmouseup="duck(false)" ontouchstart="duck(true)" ontouchend="duck(false)">⬇️ Присесть</button>
-                        <button onclick="resetGame()">🔄 Сброс</button>
-                        <button id="restartBtn" onclick="restartGame()" style="display:none;">🎮 Играть снова</button>
+        <nav class="activity-nav" aria-label="Разделы страницы"><div class="container"><a href="#quiz">Викторина</a><a href="#password-game">Игра о паролях</a><a href="#download-games">Игры для скачивания</a><a href="#coloring">Раскраски</a><a href="#teachers">Педагогам</a></div></nav>
+
+        <section class="activity-section activity-section--soft" id="quiz" aria-labelledby="quiz-title">
+            <div class="container activity-heading"><div><p class="eyebrow">10 вопросов</p><h2 id="quiz-title">Викторина по цифровой безопасности</h2><p>Выбирай ответ и сразу получай короткое объяснение. Результат сохранять или отправлять никуда не нужно.</p></div><span class="activity-badge">5–7 минут</span></div>
+            <div class="container quiz-shell">
+                <div class="quiz-meta"><span>Вопрос <span id="q-num">1</span> из <span id="q-total">10</span></span><span>Баллы: <strong id="score-now">0</strong></span></div>
+                <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill" style="width: 0%"></div></div>
+                <div id="quiz-screen"><div class="question-card" id="question-card"><div class="question-category" id="q-category">Категория</div><div class="question-text" id="q-text">Текст вопроса...</div><div class="answers-grid" id="answers-grid"></div><div id="feedback" role="status" aria-live="polite"><span id="feedback-icon"></span><span id="feedback-text"></span><div id="feedback-hint"></div></div><button id="next-btn" type="button">Следующий вопрос →</button></div></div>
+                <div id="result-screen"><div class="result-card"><div class="result-emoji" id="result-emoji" aria-hidden="true">🏆</div><h2 id="result-title">Готово!</h2><div class="result-score-big"><span id="final-score">0</span><span> / <span id="final-total">10</span></span></div><p class="result-msg" id="result-msg">Отличный результат!</p><button id="retry-btn" type="button" onclick="restartQuiz()">Пройти ещё раз</button></div></div>
+            </div>
+        </section>
+
+        <section class="activity-section" id="password-game" aria-labelledby="password-game-title">
+            <div class="container activity-heading"><div><p class="eyebrow">Интерактивная игра</p><h2 id="password-game-title">Пароль под защитой</h2><p>Чем сложнее пароль, тем больше времени потребуется на его подбор. Управляй персонажем и постарайся продержаться как можно дольше.</p></div><span class="activity-badge activity-badge--green">От 9 лет</span></div>
+            <div class="container privacy-note"><strong>Важно:</strong> придумай вымышленный пароль специально для игры. Не вводи пароль от настоящего аккаунта.</div>
+            <div class="container game-section">
+                <div class="game-container" id="gameContainer">
+                    <div class="game-toolbar"><span>Тренажёр стойкости пароля</span><button class="fullscreen-btn" type="button" onclick="toggleFullscreen()">На весь экран</button></div>
+                    <div class="game-wrapper" id="gameWrapper" tabindex="0">
+                        <div id="startScreen"><h3>Сколько продержится пароль?</h3><p>Введи тестовый вариант и начни игру. Пробел или стрелка вверх — прыжок, стрелка вниз — пригнуться.</p><label for="passwordInput">Тестовый пароль</label><div class="game-start-controls"><input id="passwordInput" type="text" autocomplete="off" placeholder="Например: Kot!More#27"><button type="button" onclick="startGame()">Начать игру</button></div></div>
+                        <div id="terminal" style="display:none;"><div class="terminal-stats"><span>Пароль: <strong id="password"></strong></span><span>Подбор: <strong id="hack"></strong></span><span>Очки: <strong id="score">0</strong></span></div><div id="log" aria-live="polite"></div></div>
+                        <canvas id="game" style="display:none;" aria-label="Игровое поле"></canvas>
+                        <div id="gameControls" style="display:none;"><button type="button" onclick="jump()">Прыжок</button><button type="button" onmousedown="duck(true)" onmouseup="duck(false)" ontouchstart="duck(true)" ontouchend="duck(false)">Пригнуться</button><button type="button" onclick="resetGame()">Сбросить</button><button id="restartBtn" type="button" onclick="restartGame()" style="display:none;">Играть снова</button></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="material-links">
-                <h2 class="green">Игры</h2>
-                <a class="underline_none games-link" download href="/download/games/instruction.docx">скачать инструкции к играм</a>
-            </div>
-            <div class="games">
-                <div class="games-text">
-                    <h3 class="green">«Найди опасность»</h3>
-                    <p class="p-24">Что скрывается за экраном? Шесть картинок — и только ты можешь распознать, где таится опасность! <span class="hidden-678">Проверь свою внимательность: найди «плохие» сцены и защити мальчика от ловушек Интернета. Готов стать цифровым супергероем?</span></p>
-                </div>
-                <div class="games-links">
-                    <a download href="/download/games/find-danger.zip"><img class="games-img" src="/img/game-1.jpg" alt=""></a>
-                    <a download href="/download/games/find-danger.zip"><p>Скачать ⤓</p></a>
-                </div>
-            </div>
-            <div class="games">
-                <div class="games-text">
-                    <h3 class="green">«Создай пароль»</h3>
-                    <p class="p-24">Представь: твой аккаунт – это сундук с сокровищами. А пароль – ключ к нему! Но не всякий ключ надёжный… <span class="hidden-678">Из шести вариантов найди те, что выдержат даже попытку взлома! Выбери самые надёжные и узнай, как создавать настоящие «цифровые замки»! Твой аккаунт — под защитой, если ты пройдёшь это испытание!</span></p>
-                </div>
-                <div class="games-links">
-                    <a download href="/download/games/create-password.zip"><img class="games-img" src="/img/game-2.jpg" alt=""></a>
-                    <a download href="/download/games/create-password.zip"><p>Скачать ⤓</p></a>
-                </div>
-            </div>
-            <div class="games">
-                <div class="games-text">
-                    <h3 class="green">«Антивирусный щит»</h3>
-                    <p class="p-24">Каждое твоё решение — как щит против вирусов, обмана и поломок! Слушай ситуацию, выбирай: «хорошо» или «плохо» — и объясняй, почему. <span class="hidden-678">Правильный ответ – это сильная защита! Сыграй и докажи, что ты — настоящий мастер безопасного интернета!</span></p>
-                </div>
-                <div class="games-links">
-                    <a href="/download/games/antivirus.zip"><img class="games-img" src="/img/game-3.jpg" alt=""></a>
-                    <a href="/download/games/antivirus.zip"><p>Скачать ⤓</p></a>
-                </div>
+        <section class="activity-section activity-section--soft" id="download-games" aria-labelledby="games-title">
+            <div class="container activity-heading activity-heading--with-action"><div><p class="eyebrow">Для группы или семьи</p><h2 id="games-title">Игры для скачивания</h2><p>Распечатайте карточки, прочитайте инструкцию и обсудите решения после игры.</p></div><a class="button button--secondary" download href="./download/games/instruction.docx">Скачать общую инструкцию</a></div>
+            <div class="container download-grid">
+                <article class="download-card"><img src="./img/game-1.jpg" alt="Пример карточки игры «Найди опасность»" loading="lazy"><div><div class="meta-row"><span>Наблюдательность</span><span>ZIP</span></div><h3>Найди опасность</h3><p>Шесть ситуаций, в которых нужно заметить риск и объяснить безопасное решение.</p><a class="download-link" download href="./download/games/find-danger.zip">Скачать игру <span aria-hidden="true">↓</span></a></div></article>
+                <article class="download-card"><img src="./img/game-2.jpg" alt="Пример карточки игры «Создай пароль»" loading="lazy"><div><div class="meta-row"><span>Пароли</span><span>ZIP</span></div><h3>Создай пароль</h3><p>Сравни варианты и узнай, какие признаки делают пароль более устойчивым.</p><a class="download-link" download href="./download/games/create-password.zip">Скачать игру <span aria-hidden="true">↓</span></a></div></article>
+                <article class="download-card"><img src="./img/game-3.jpg" alt="Пример карточки игры «Антивирусный щит»" loading="lazy"><div><div class="meta-row"><span>Устройства</span><span>ZIP</span></div><h3>Антивирусный щит</h3><p>Оцени поступки героев и собери правила, которые защищают устройство и данные.</p><a class="download-link" download href="./download/games/antivirus.zip">Скачать игру <span aria-hidden="true">↓</span></a></div></article>
             </div>
         </section>
-        <section>
-            <h2 class="orange">Материал для педагогов</h2>
-            <p class="p-24">В разделе представлены методические материалы по интернет-безопасности: презентации и тексты уроков для обучающихся 1–2 и 3–4 классов.</p>
-            <div class="lessons">
-                <div>
-                    <h3 class="orange lessons-h3">“Правила безопасности в интернете” 1-2 класс</h3>
-                    <a download href="/download/lessons/lesson_1-2.zip" class="underline_none orange games-link p-24">скачать презентацию и конспект урока</a>
-                </div>
-                <img class="lessons-img" src="/img/presentation-1.jpg" alt="">
-            </div>
-            <div class="lessons">
-                <div>
-                    <h3 class="orange lessons-h3">“Как играть в онлайн-игры безопасно” 3-4 класс</h3>
-                    <a download href="/download/lessons/lesson_3-4.zip" class="underline_none orange games-link p-24">скачать презентацию и конспект урока</a>
-                </div>
-                <img class="lessons-img" src="/img/presentation-2.jpg" alt="">
+
+        <section class="activity-section" id="coloring" aria-labelledby="coloring-title">
+            <div class="container activity-heading"><div><p class="eyebrow">Материалы для печати</p><h2 id="coloring-title">Раскраски</h2><p>Шесть иллюстраций с персонажами проекта в формате PDF.</p></div><span class="activity-badge">6 файлов</span></div>
+            <div class="container coloring-slider">
+                <button class="slider-btn slider-btn--prev" type="button" aria-label="Предыдущая раскраска">‹</button>
+                <div class="slider-window"><ul class="slider-track">
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-1.pdf"><img class="coloration-li-img" src="./download/img/draw-1.jpg" alt="Раскраска 1" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-1.pdf">Скачать PDF</a></li>
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-2.pdf"><img class="coloration-li-img" src="./download/img/draw-2.jpg" alt="Раскраска 2" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-2.pdf">Скачать PDF</a></li>
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-3.pdf"><img class="coloration-li-img" src="./download/img/draw-3.jpg" alt="Раскраска 3" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-3.pdf">Скачать PDF</a></li>
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-4.pdf"><img class="coloration-li-img" src="./download/img/draw-4.png" alt="Раскраска 4" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-4.pdf">Скачать PDF</a></li>
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-5.pdf"><img class="coloration-li-img" src="./download/img/draw-5.png" alt="Раскраска 5" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-5.pdf">Скачать PDF</a></li>
+                    <li class="coloration-li slide"><a download href="./download/pdf/draw-6.pdf"><img class="coloration-li-img" src="./download/img/draw-6.png" alt="Раскраска 6" loading="lazy"></a><a class="coloring-download" download href="./download/pdf/draw-6.pdf">Скачать PDF</a></li>
+                </ul></div>
+                <button class="slider-btn slider-btn--next" type="button" aria-label="Следующая раскраска">›</button>
             </div>
         </section>
-        <section id="contacts" class="contacts">
-            <h2 class="t-center orange mb-25">Ещё больше интересных материалов в наших социальных сетях!</h2>
-            <p class="t-center p-24 green mb-25">В наших социальных сетях вы найдёте много видео, клипов и постов о том, как правильно вести себя в интернет пространстве. Мы за безопасный интернет! </p>
 
-            <div class="socials footer-div">
-                <a class="blue-a blue" href="https://vk.com/izdaniemonitorchiki"><img class="blue-icons" src="./img/VK-Negative-blue.svg" alt="vk-image">Вконтакте</a>
-                <a class="blue-a blue" href="https://t.me/izdaniemonitochiki"><img class="blue-icons" src="./img/Telegram-Negative-blue.svg" alt="tg-image">Телеграм</a>
+        <section class="teacher-section" id="teachers" aria-labelledby="teachers-title">
+            <div class="container teacher-intro"><div><p class="eyebrow">Педагогам</p><h2 id="teachers-title">Готовые материалы для занятий</h2></div><p>Презентации и конспекты можно использовать на классном часе или уроке цифровой грамотности. В карточке указаны возраст и тема занятия.</p></div>
+            <div class="container lesson-grid">
+                <article class="lesson-card"><img src="./img/presentation-1.jpg" alt="Первый слайд презентации о правилах безопасности" loading="lazy"><div><div class="meta-row"><span>1–2 класс</span><span>Презентация + конспект</span></div><h3>Правила безопасности в интернете</h3><p>Вводное занятие о личных данных, незнакомцах, подозрительных ссылках и помощи взрослых.</p><a class="download-link" download href="./download/lessons/lesson_1-2.zip">Скачать комплект <span aria-hidden="true">↓</span></a></div></article>
+                <article class="lesson-card"><img src="./img/presentation-2.jpg" alt="Первый слайд презентации о безопасных онлайн-играх" loading="lazy"><div><div class="meta-row"><span>3–4 класс</span><span>Презентация + конспект</span></div><h3>Как играть в онлайн-игры безопасно</h3><p>Занятие об общении, покупках, паролях и правилах поведения в игровых сообществах.</p><a class="download-link" download href="./download/lessons/lesson_3-4.zip">Скачать комплект <span aria-hidden="true">↓</span></a></div></article>
             </div>
-
-            <img class="green-orange" src="./img/green-orange.png" alt="">
-            <img class="subscribe" src="./img/subscribe.png" alt="">
         </section>
     </main>
-    <footer>
-        <div class="container white flex-column">
-            <div class="footer-div">
-                <a class="footer-a white" href="https://vk.com/izdaniemonitorchiki"><img src="/img/VK-Negative.svg" alt="vk-image">Вконтакте</a>
-                <a class="footer-a white" href="https://t.me/izdaniemonitochiki"><img src="/img/Telegram-Negative.svg" alt="tg-image">Телеграм</a>
+
+    <footer class="site-footer site-footer--official">
+        <div class="container site-footer__grid">
+            <div>
+                <a class="brand brand--footer" href="/">
+                    <span class="brand__mark" aria-hidden="true">М</span>
+                    <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+                </a>
+                <p>Образовательный информационный проект для детей, родителей и педагогов.</p>
             </div>
-            <p class="t-center">МОНИТОРЧИКИ: Детское электронное издание о безопасности в сети Интернет</p>
+            <div>
+                <p class="site-footer__label">Разделы</p>
+                <nav class="site-footer__nav" aria-label="Навигация в подвале">
+                    <a href="/materials.html">Детям</a>
+                    <a href="/forParents.html">Родителям</a>
+                    <a href="/entertainment.html#teachers">Педагогам</a>
+                    <a href="/entertainment.html">Игры</a>
+                    <a href="/index.html#about">О проекте</a>
+                </nav>
+            </div>
+            <div class="site-footer__status">
+                <p class="site-footer__label">Официальная информация</p>
+                <p>Проект находится на этапе организационного развития. Сведения об организации, команде и подтверждённых партнёрах публикуются открыто после согласования.</p>
+                <div class="site-footer__contacts">
+                    <a href="/index.html#partners">Партнёрам</a>
+                    <a href="/index.html#contacts">Контакты</a>
+                    <a href="https://vk.com/izdaniemonitorchiki" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+                    <a href="https://t.me/izdaniemonitochiki" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="container site-footer__bottom">
+            <p>© 2026 «Мониторчики»</p>
+            <p>Материалы носят образовательный и информационный характер</p>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
-    <script src="./quiz.min.js"></script>
-    <script src="./slider.js"></script>
-    <script src="./dino.js"></script>
-
+    <script src="./script.js"></script><script src="./quiz.min.js"></script><script src="./slider.js"></script><script src="./dino.js"></script>
 </body>
-</html> 
+</html>
