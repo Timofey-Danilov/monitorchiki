@@ -3,162 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мониторчики</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Интернет-безопасность для детей — Мониторчики</title>
+    <meta name="description" content="Понятные статьи для детей о мошенниках, вирусах, паролях, личных данных, кибербуллинге и безопасном общении в интернете.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://monitorchiki.ru/materials.html">
+    <meta property="og:locale" content="ru_RU"><meta property="og:type" content="website"><meta property="og:site_name" content="Мониторчики">
+    <meta property="og:title" content="Интернет-безопасность для детей — Мониторчики"><meta property="og:description" content="Статьи о мошенниках, вирусах, паролях, личных данных и безопасном общении в интернете."><meta property="og:url" content="https://monitorchiki.ru/materials.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./css/style.css">
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="container header">
-            <div>
-                <h1 class="white">Мониторчики</h1>
-                <p class="p-16 white">Детское электронное издание</p>
-            </div>
-            <nav class="navigation">
-                <div>
-                    <a class="p-26 white" href="./index.html">О нас</a>
-                </div>
-                <div class="dropdown">
-                    <a class="p-26 white" href="#">Полезные материалы</a>
-                    <ul class="dropdown-list">
-                        <li><a href="forParents.html">Для родителей</a></li>
-                        <li><a href="materials.html">Для детей</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="p-26 white" href="./entertainment.html">Развлечения</a>
-                </div>
+<body class="catalog-page catalog-page--kids">
+    <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/" aria-label="Мониторчики — главная страница">
+                <span class="brand__mark" aria-hidden="true">М</span>
+                <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+            </a>
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+            <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация">
+                <a href="./materials.html">Детям</a>
+                <a href="./forParents.html">Родителям</a>
+                <a href="./entertainment.html#teachers">Педагогам</a>
+                <a href="./entertainment.html">Игры</a>
+                <a href="./#about">О проекте</a>
+                <a href="./#partners">Партнёрам</a>
             </nav>
-            <div class="burger">
-                <span></span>
-            </div>
         </div>
     </header>
-    <main class="container">
-        <section class="start">
-            <div>
-                <h2 class="orange">Знания – сила!</h2>
-                <p class="p-24 orange">Здесь ты найдешь много полезной информации, благодаря которой ты будешь знать, как не попасться на удочку мошенников и много другое!</p>
-            </div>
-            <video class="head-img big" preload="metadata" loop autoplay muted playsinline poster="">
-                <source src="./video/orange_stars.mp4" type="video/webm">
-            </video>
-        </section>
-        <section class="">
-            <h2 class="orange mb-25">Полезные статьи</h2>
-            <ul class="grid-1">
-                <li id="card1" class="card-1 bg_orange shadow_orange">
-                    <div class="card-1_div bg_white">
-                        <div>
-                            <h3 class="orange">Зарядка для глаз</h4>
-                            <p>
-                                Здорово, что тебе нравится компьютер, ведь в Интернете столько всего интересного: 
-                                мультфильмы, игры, познавательные видео и, конечно, книги! 
-                                Кажется, что экран — это волшебная дверь, из которой совсем не хочется выходить.
-                            </p>
-                            <p class="hidden-678">
-                                Но давай поговорим о твоих глазах. Ведь они — настоящие супергерои! 
-                                Целый день они помогают тебе видеть мир: различать цвета, читать задания, 
-                                замечать друзей, играть в мяч. Когда ты смотришь в компьютер или планшет, 
-                                твои глаза работают на полную мощность!
-                            </p>
-                        </div>
-                        <img class="card-1_div_img" src="./img/orange-anfas.png" alt="">
-                    </div>
-                    <a class="card-button" href="./forkids/material-1.html"><p class="p-24">Подробнее &#8594;</p></a>
-                </li>
-                <li id="card2" class="card-1 bg_green shadow_green">
-                    <div class="card-1_div bg_white">
-                        <div>
-                            <h3 class="green">Не молчи о том, что происходит в интернете!</h4>
-                            <p>
-                                Интернет – это огромное пространство с интересными играми, 
-                                картинками и новыми друзьями. Но, как и в любом незнакомом месте, 
-                                там можно столкнуться с чем-то пугающим. Поэтому важно не хранить секреты о том, 
-                                что происходит в сети, а делиться ими.
-                            </p>    
-                            <p class="hidden-678">
-                                Почему же так важно говорить о том, 
-                                что происходит в интернете? Давай разберёмся вместе!
-                            </p>
-                        </div>
-                        <img class="card-1_div_img" src="./img/green-masc.png" alt="">
-                    </div>
-                    <a class="card-button" href="./forkids/material-2.html"><p class="p-24">Подробнее &#8594;</p></a>
-                </li>
-                <li id="card3" class="card-1 bg_orange shadow_orange">
-                    <div class="card-1_div bg_white">
-                        <div>
-                            <h3 class="orange">Мошенники: кто они и как не попасться</h4>
-                            <p>
-                                Мошенники — это люди, которые обманывают других, чтобы получить что-то ценное, 
-                                например деньги или личные данные. Они изобретают разные уловки, 
-                                чтобы заставить тебя поверить в их ложь и сделать то, что им нужно. 
-                                Часто мошенники притворяются твоими друзьями, сотрудниками банка 
-                                или другими знакомыми, чтобы завоевать твоё доверие.
-                            </p>    
-                            <p class="hidden-678">
-                                Как мошенники могут связаться с тобой? Давай узнаем!
-                            </p>
-                        </div>
-                        <img class="card-1_div_img-purple" src="./img/orange-last.png" alt="">
-                    </div>
-                    <a class="card-button" href="./forkids/material-3.html"><p class="p-24">Подробнее &#8594;</p></a>
-                </li>
-                <li id="card2" class="card-1 bg_green shadow_green">
-                    <div class="card-1_div bg_white">
-                        <div>
-                            <h3 class="green">Что такое вирусы и вредоносное программное обеспечение (ПО)?</h4>
-                            <p>
-                                Вирусы и вредоносное программное обеспечение (ПО) — это программы, созданные людьми с помощью языка программирования, которые могут проникать в компьютеры и другие устройства разными способами и наносить серьёзный вред.
-                            </p>    
-                            <p class="green bold hidden-678">
-                                Какой вред несут вирусы?
-                            </p>
-                        </div>
-                        <img class="card-1_div_img" src="./img/green-masc.png" alt="">
-                    </div>
-                    <a class="card-button" href="./forkids/material-4.html"><p class="p-24">Подробнее &#8594;</p></a>
-                </li>
-                <li id="card3" class="card-1 bg_orange shadow_orange">
-                    <div class="card-1_div bg_white">
-                        <div>
-                            <h3 class="orange">Какие данные нельзя давать нейросетям?</h4>
-                            <p>
-                                Нейросеть — это умная программа, которая учится понимать и отвечать на вопросы, как человек. Она может помогать искать информацию, писать тексты, рисовать и даже создавать музыку. Но несмотря на свои способности, нейросети — это не люди, поэтому им не нужно знать всё о тебе. Заведомо личная информация должна оставаться только у тебя.
-                            </p>    
-                            <p class="hidden-678">
-                                Личные данные — это секрет, но какие из ваших данных являются личными? Давай разберёмся!
-                            </p>
-                        </div>
-                        <img class="card-1_div_img-purple" src="./img/orange-anfas.png" alt="">
-                    </div>
-                    <a class="card-button" href="./forkids/material-5.html"><p class="p-24">Подробнее &#8594;</p></a>
-                </li>
-            </ul>
-        </section>
-        <!-- <section id="contacts" class="contacts">
-            <h2 class="t-center orange mb-25">Ещё больше интересных материалов в наших социальных сетях!</h2>
-            <p class="t-center p-24 green mb-25">В наших социальных сетях вы найдёте много видео, клипов и постов о том, как правильно вести себя в интернет пространстве. Мы за безопасный интернет! </p>
 
-            <div class="socials footer-div">
-                <a class="blue-a blue" href="https://vk.com/izdaniemonitorchiki"><img class="blue-icons" src="./img/VK-Negative-blue.svg" alt="vk-image">Вконтакте</a>
-                <a class="blue-a blue" href="https://t.me/izdaniemonitochiki"><img class="blue-icons" src="./img/Telegram-Negative-blue.svg" alt="tg-image">Телеграм</a>
+    <main id="main-content">
+        <section class="catalog-hero">
+            <div class="container catalog-hero__grid">
+                <div><p class="eyebrow">Материалы для детей</p><h1>Разбирайся в интернете уверенно</h1><p>Короткие и понятные материалы о ситуациях, которые встречаются в играх, чатах, социальных сетях и приложениях.</p><div class="catalog-hero__note"><strong>Запомни:</strong> если что-то в интернете пугает или смущает, расскажи взрослому, которому доверяешь.</div></div>
+                <div class="catalog-hero__visual"><img src="./img/orange-header.png" id="MainMaskot" alt="Персонаж Мониторчиков" width="520" height="420"></div>
             </div>
+        </section>
 
-            <img class="green-orange" src="./img/green-orange.png" alt="">
-            <img class="subscribe" src="./img/subscribe.png" alt="">
-        </section> -->
+        <section class="catalog-section" aria-labelledby="catalog-title">
+            <div class="container">
+                <div class="section-heading section-heading--row"><div><p class="eyebrow">Библиотека</p><h2 id="catalog-title">Выбери интересующую тему</h2></div><p class="catalog-count" aria-live="polite">Найдено: <span data-visible-count>10</span></p></div>
+                <div class="filter-bar" role="group" aria-label="Фильтр материалов">
+                    <button class="filter-chip is-active" type="button" data-filter="all">Все темы</button>
+                    <button class="filter-chip" type="button" data-filter="protection">Защита аккаунта</button>
+                    <button class="filter-chip" type="button" data-filter="communication">Общение</button>
+                    <button class="filter-chip" type="button" data-filter="privacy">Личные данные</button>
+                    <button class="filter-chip" type="button" data-filter="wellbeing">Самочувствие</button>
+                </div>
+
+                <div class="library-grid" data-filter-grid>
+                    <article class="library-card" data-tags="wellbeing"><div class="library-card__image tone-orange"><img src="./img/eyes-1.png" alt="Упражнения для глаз" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Самочувствие</span><span>7–12 лет · 6 мин</span></div><h3>Зарядка для глаз</h3><p>Простые упражнения, которые помогут глазам отдохнуть после работы за экраном.</p><a href="./forkids/material-1.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="communication wellbeing"><div class="library-card__image tone-green"><img src="./img/green-masc.png" alt="Зелёный персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Поддержка</span><span>7–12 лет · 5 мин</span></div><h3>Не молчи о том, что происходит в интернете</h3><p>Почему важно рассказывать взрослым о странных сообщениях и неприятных ситуациях.</p><a href="./forkids/material-2.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="protection communication"><div class="library-card__image tone-purple"><img src="./img/purple-header.png" alt="Фиолетовый персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Мошенничество</span><span>9–13 лет · 7 мин</span></div><h3>Мошенники: кто они и как не попасться</h3><p>Как распознать обман, проверить сообщение и не отдать злоумышленнику важные данные.</p><a href="./forkids/material-3.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="protection"><div class="library-card__image tone-green"><img src="./img/green-1.png" alt="Персонаж Мониторчиков о защите устройства" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Устройства</span><span>9–13 лет · 8 мин</span></div><h3>Что такое вирусы и вредоносные программы</h3><p>Откуда берутся опасные программы и какие привычки помогают защитить устройство.</p><a href="./forkids/material-4.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="privacy"><div class="library-card__image tone-orange"><img src="./img/orange-masc.png" alt="Оранжевый персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Нейросети</span><span>9–14 лет · 6 мин</span></div><h3>Какие данные нельзя давать нейросетям</h3><p>Что относится к личной информации и почему её не стоит отправлять цифровым сервисам.</p><a href="./forkids/material-5.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="communication privacy"><div class="library-card__image tone-orange"><img src="./img/orange-anfas.png" alt="Оранжевый персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Общение</span><span>7–12 лет · 5 мин</span></div><h3>Если тебе пишет незнакомец</h3><p>Какие сообщения должны насторожить и почему не нужно продолжать подозрительный разговор.</p><a href="./forkids/material-6.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="protection privacy"><div class="library-card__image tone-green"><img src="./img/green-masc.png" alt="Зелёный персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Аккаунты</span><span>8–13 лет · 6 мин</span></div><h3>Пароль — твой ключ от аккаунта</h3><p>Как придумать надёжный пароль и почему нельзя сообщать другим коды подтверждения.</p><a href="./forkids/material-7.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="protection"><div class="library-card__image tone-purple"><img src="./img/purple-1.png" alt="Фиолетовый персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Опасные ссылки</span><span>8–13 лет · 6 мин</span></div><h3>Ссылки, вирусы и «бесплатные подарки»</h3><p>Как отличить подозрительную ссылку и что делать, если уже нажал на неё.</p><a href="./forkids/material-8.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="communication wellbeing"><div class="library-card__image tone-orange"><img src="./img/orange-last.png" alt="Оранжевый персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Кибербуллинг</span><span>8–14 лет · 6 мин</span></div><h3>Тебя обижают в чате или игре. Что делать?</h3><p>Как сохранить доказательства, заблокировать обидчика и попросить о помощи.</p><a href="./forkids/material-9.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                    <article class="library-card" data-tags="privacy communication"><div class="library-card__image tone-green"><img src="./img/green-2.png" alt="Зелёный персонаж Мониторчиков" loading="lazy"></div><div class="library-card__body"><div class="meta-row"><span>Публикации</span><span>8–14 лет · 7 мин</span></div><h3>Что можно выкладывать в интернет</h3><p>Четыре вопроса, которые стоит задать себе перед публикацией фото или записи.</p><a href="./forkids/material-10.html">Читать <span aria-hidden="true">→</span></a></div></article>
+                </div>
+                <p class="filter-empty" data-filter-empty hidden>По этому фильтру пока нет материалов.</p>
+            </div>
+        </section>
+
+        <section class="catalog-cta"><div class="container catalog-cta__inner"><div><p class="eyebrow">Проверь себя</p><h2>Закрепи знания в игре</h2><p>Пройди викторину, попробуй интерактивную игру или скачай материалы для занятия.</p></div><a class="button button--light" href="./entertainment.html">Играть и узнавать новое</a></div></section>
     </main>
-    <footer>
-        <div class="container white flex-column">
-            <div class="footer-div">
-                <a class="footer-a white" href="https://vk.com/izdaniemonitorchiki"><img src="/img/VK-Negative.svg" alt="vk-image">Вконтакте</a>
-                <a class="footer-a white" href="https://t.me/izdaniemonitochiki"><img src="/img/Telegram-Negative.svg" alt="tg-image">Телеграм</a>
+    <footer class="site-footer site-footer--official">
+        <div class="container site-footer__grid">
+            <div>
+                <a class="brand brand--footer" href="/">
+                    <span class="brand__mark" aria-hidden="true">М</span>
+                    <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+                </a>
+                <p>Образовательный информационный проект для детей, родителей и педагогов.</p>
             </div>
-            <p class="t-center">МОНИТОРЧИКИ: Детское электронное издание о безопасности в сети Интернет</p>
+            <div>
+                <p class="site-footer__label">Разделы</p>
+                <nav class="site-footer__nav" aria-label="Навигация в подвале">
+                    <a href="/materials.html">Детям</a>
+                    <a href="/forParents.html">Родителям</a>
+                    <a href="/entertainment.html#teachers">Педагогам</a>
+                    <a href="/entertainment.html">Игры</a>
+                    <a href="/index.html#about">О проекте</a>
+                </nav>
+            </div>
+            <div class="site-footer__status">
+                <p class="site-footer__label">Официальная информация</p>
+                <p>Проект находится на этапе организационного развития. Сведения об организации, команде и подтверждённых партнёрах публикуются открыто после согласования.</p>
+                <div class="site-footer__contacts">
+                    <a href="/index.html#partners">Партнёрам</a>
+                    <a href="/index.html#contacts">Контакты</a>
+                    <a href="https://vk.com/izdaniemonitorchiki" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+                    <a href="https://t.me/izdaniemonitochiki" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="container site-footer__bottom">
+            <p>© 2026 «Мониторчики»</p>
+            <p>Материалы носят образовательный и информационный характер</p>
         </div>
     </footer>
-
     <script src="./script.js"></script>
 </body>
 </html>

@@ -3,213 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мониторчики</title>
+    <title>Мониторчики — цифровая безопасность для детей и взрослых</title>
+    <meta name="description" content="Понятные материалы, игры и практические рекомендации по цифровой безопасности для детей, родителей и педагогов.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://monitorchiki.ru/">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Мониторчики">
+    <meta property="og:title" content="Мониторчики — цифровая безопасность для детей и взрослых">
+    <meta property="og:description" content="Материалы, игры и практические рекомендации, которые помогают всей семье увереннее чувствовать себя в интернете.">
+    <meta property="og:url" content="https://monitorchiki.ru/">
+    <meta property="og:image" content="https://monitorchiki.ru/img/head-img.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Мониторчики — цифровая безопасность для детей и взрослых">
+    <meta name="twitter:description" content="Материалы, игры и практические рекомендации о безопасном интернете.">
+    <meta name="twitter:image" content="https://monitorchiki.ru/img/head-img.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./css/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Мониторчики",
+        "url": "https://monitorchiki.ru/",
+        "description": "Образовательный проект о цифровой безопасности для детей, родителей и педагогов",
+        "sameAs": ["https://vk.com/izdaniemonitorchiki", "https://t.me/izdaniemonitochiki"]
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
 </head>
-<body>
-    <header>
-        <div class="container header">
-            <div>
-                <h1 class="white">Мониторчики</h1>
-                <p class="p-16 white">Детское электронное издание</p>
-            </div>
-            <nav class="navigation">
-                <div>
-                    <a class="p-26 white" href="/index.html">О нас</a>
-                </div>
-                <div class="dropdown">
-                    <a class="p-26 white" href="#">Полезные материалы</a>
-                    <ul class="dropdown-list">
-                        <li><a href="forParents.html">Для родителей</a></li>
-                        <li><a href="materials.html">Для детей</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="p-26 white" href="/entertainment.html">Развлечения</a>
-                </div>
+<body class="home-page">
+    <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/" aria-label="Мониторчики — главная страница">
+                <span class="brand__mark" aria-hidden="true">М</span>
+                <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+            </a>
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+            <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация">
+                <a href="./materials.html">Детям</a>
+                <a href="./forParents.html">Родителям</a>
+                <a href="./entertainment.html#teachers">Педагогам</a>
+                <a href="./entertainment.html">Игры</a>
+                <a href="#about">О проекте</a>
+                <a href="#partners">Партнёрам</a>
             </nav>
-            <div class="burger">
-                <span></span>
-            </div>
         </div>
     </header>
-    <main class="container">
-        <section class="start">
-            <div>
-                <h2 class="orange">Мы повысим твою интернет грамотность!</h2>
-                <p class="p-24 green">Мониторчики — это детское электронное издание<br>о безопасности в сети Интернет</p>
-            </div>
-            <img class="head-img" src="./img/head-img.png" alt="mascots">
-        </section>
-        <section id="cards">
-            <div class="publish">
-                <div class="publish_item bg_light-purple">
-                    <div class="white-box">
-                        <img src="./img/box1.png" alt="orange-mascot">
-                        <h3 class="t-center orange">Общение в сети: оффтоп, флуд, спам</h3>
-                        <p>Мониторчики на хайпе! Ой, то есть на связи! Рассказываем об интернет-сленге на вайбовых карточках</p>
-                    </div>
-                    <button id="openModalBtn1" class="card-button"><p class="p-24">Подробнее &#8594;</p></button>
-                </div>
-                <div class="publish_item bg_light-purple">
-                    <div class="white-box">
-                        <img src="./img/box2.png" alt="green-mascot">
-                        <h3 class="t-center green">Советы медиа-этикета<br>(часть 1)</h3>
-                        <p>Сегодня начнем погружаться этикет-просвет. А вы пока расскажите в комментариях, как обычно здороваетесь с друзьями при встрече и как вы друг к другу обращаетесь</p>
-                    </div>
-                    <button id="openModalBtn2" class="card-button"><p class="p-24">Подробнее &#8594;</p></button>
-                </div>
-            </div>
-            <div class="publish">
-                <div class="publish_item bg_light-purple">
-                    <div class="white-box">
-                        <img src="./img/box3.png" alt="purple-mascot">
-                        <h3 class="t-center purple">Советы медиа-этикета<br>(часть 2)</h3>
-                        <p>ПРИВЕТ, ДРУЗЬЯ И ПОДРУГИ!!! Ой, простите, на капс нажали. Продолжаем учить медиа-этикет, это уже 2 часть! Признавайтесь: часто пользуетесь гс?</p>
-                    </div>
-                    <button id="openModalBtn3" class="card-button"><p class="p-24">Подробнее &#8594;</p></button>
-                </div>
-                <div class="publish_item bg_light-purple">
-                    <div class="white-box">
-                        <img src="./img/box4.png" alt="orange-mascot">
-                        <h3 class="t-center orange">Реклама</h3>
-                        <p>Ой, это опять реклама.... Подожди! Не пропускай! Это же новый интересны материал от  Мониторчиков</p>
-                    </div>
-                    <button id="openModalBtn4" class="card-button"><p class="p-24">Подробнее &#8594;</p></button>
-                </div>
-            </div>
 
-            <dialog id="modal1">
-                <div class="modal-content1">
-                    <button id="closeModalBtn1" class="close">&times;</button>
-                    <div id="slider1" class="slider">
-                        <div class="slide1"><img class="slider-img" src="./img/slide1_1.jpg" alt=""></div>
-                        <div class="slide1"><img class="slider-img" src="./img/slide1_2.jpg" alt=""></div>
-                        <div class="slide1"><img class="slider-img" src="./img/slide1_3.jpg" alt=""></div>
-                        <div class="slide1"><img class="slider-img" src="./img/slide1_4.jpg" alt=""></div>
+    <main id="main-content">
+        <section class="hero">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <p class="eyebrow">Образовательный проект</p>
+                    <h1>Безопасный интернет начинается с понятного разговора</h1>
+                    <p class="hero__lead">Помогаем детям, родителям и педагогам разбираться в цифровом мире — спокойно, практично и без сложных терминов.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="./materials.html">Материалы для детей</a>
+                        <a class="button button--secondary" href="./forParents.html">Советы родителям</a>
                     </div>
-                    <button id="prevBtn1" class="nav-btn">Назад</button>
-                    <button id="nextBtn1" class="nav-btn">Вперед</button>
-                </div>
-            </dialog>
-            <dialog id="modal2">
-                <div class="modal-content2">
-                    <button id="closeModalBtn2" class="close">&times;</button>
-                    <div id="slider2" class="slider">
-                        <div class="slide2"><img class="slider-img" src="./img/slide2_1.jpg" alt=""></div>
-                        <div class="slide2"><img class="slider-img" src="./img/slide2_2.jpg" alt=""></div>
-                        <div class="slide2"><img class="slider-img" src="./img/slide2_3.jpg" alt=""></div>
-                        <div class="slide2"><img class="slider-img" src="./img/slide2_4.jpg" alt=""></div>
-                    </div>
-                    <button id="prevBtn2" class="nav-btn">Назад</button>
-                    <button id="nextBtn2" class="nav-btn">Вперед</button>
-                </div>
-            </dialog>
-            <dialog id="modal3">
-                <div class="modal-content3">
-                    <button id="closeModalBtn3" class="close">&times;</button>
-                    <div id="slider3" class="slider">
-                        <div class="slide3"><img class="slider-img" src="./img/slide3_1.jpg" alt=""></div>
-                        <div class="slide3"><img class="slider-img" src="./img/slide3_2.jpg" alt=""></div>
-                        <div class="slide3"><img class="slider-img" src="./img/slide3_3.jpg" alt=""></div>
-                        <div class="slide3"><img class="slider-img" src="./img/slide3_4.jpg" alt=""></div>
-                    </div>
-                    <button id="prevBtn3" class="nav-btn">Назад</button>
-                    <button id="nextBtn3" class="nav-btn">Вперед</button>
-                </div>
-            </dialog>
-            <dialog id="modal4">
-                <div class="modal-content4">
-                    <button id="closeModalBtn4" class="close">&times;</button>
-                    <div id="slider4" class="slider">
-                        <div class="slide4"><img class="slider-img" src="./img/slide4_1.jpg" alt=""></div>
-                        <div class="slide4"><img class="slider-img" src="./img/slide4_2.jpg" alt=""></div>
-                        <div class="slide4"><img class="slider-img" src="./img/slide4_3.jpg" alt=""></div>
-                        <div class="slide4"><img class="slider-img" src="./img/slide4_4.jpg" alt=""></div>
-                    </div>
-                    <button id="prevBtn4" class="nav-btn">Назад</button>
-                    <button id="nextBtn4" class="nav-btn">Вперед</button>
-                </div>
-            </dialog>
-
-        </section>
-        <section id="contacts" class="contacts">
-            <h2 class="t-center orange mb-25">Ещё больше интересных материалов в наших социальных сетях!</h2>
-            <p class="t-center p-24 green mb-25">В наших социальных сетях вы найдёте много видео, клипов и постов о том, как правильно вести себя в интернет пространстве. Мы за безопасный интернет! </p>
-
-            <div class="socials footer-div">
-                <a class="blue-a blue" href="https://vk.com/izdaniemonitorchiki"><img class="blue-icons" src="./img/VK-Negative-blue.svg" alt="vk-image">Вконтакте</a>
-                <a class="blue-a blue" href="https://t.me/izdaniemonitochiki"><img class="blue-icons" src="./img/Telegram-Negative-blue.svg" alt="tg-image">Телеграм</a>
-            </div>
-
-            <img class="green-orange" src="./img/green-orange.png" alt="">
-            <img class="subscribe" src="./img/subscribe.png" alt="">
-        </section>
-        <section id="about">
-            <h2 class="purple">О нас</h2>
-            <p class="p-24">Ты находишься в Интернете — очень сложной и интересной системе, где, кажется, можно найти что угодно. Интернет — это настоящий океан, в котором следует уметь ориентироваться. Как не заблудиться на бескрайних просторах сети?</p>
-            <p class="p-24">В этом мы тебе и поможем! Вместе мы научимся правильно пользоваться Интернетом, узнаем, как уберечься от его опасностей, поймём, как он работает и как мы сами можем сделать его лучше.</p>
-            <p class="p-24 purple">Цель проекта: создание и поддержание издания, позволяющего знакомить детей и их родителей с опасностями, связанными с работой в Интернете, способами защиты от них, а также ознакомление с терминами, связанными с пользованием сетью Интернет.</p>
-            <h3 class="green">Команда проекта:</h3>
-            <div class="roles-3">
-                <div class="flex-r">
-                    <ul class="p-16">
-                        <li><p>Паршикова Анастасия</p></li>
-                        <li><p>Полевая Екатерина</p></li>
-                        <li><p>Лосева Екатерина</p></li>
-                        <li><p>Никольская Алиса</p></li>
-                        <li><p>Тарасова Юлия</p></li>
-                        <li><p>Сорина Елизавета</p></li>
-                        <li><p>Бельтюкова Алёна</p></li>
+                    <ul class="hero__facts" aria-label="Преимущества проекта">
+                        <li>Понятные объяснения</li>
+                        <li>Практические шаги</li>
+                        <li>Игровые форматы</li>
                     </ul>
-                    <ul class="p-16">
-                        <li><p>Бачурина Дарья</p></li>
-                        <li><p>Демидова Алёна</p></li>
-                        <li><p>Зверева Валерия</p></li>
-                        <li><p>Депланьи Виктория</p></li>
-                        <li><p>Шпак Екатерина</p></li>
-                        <li><p>Лесовицкая Алёна</p></li>
-                        <li><p>Язмырадова Айнура</p></li>
-                    </ul>
-                </div>    
-                <img class="orange-last" src="./img/orange-last.png" alt="">
-                <div class="last-div">
-                    <div class="card white p-20">
-                        <div class="our-artists">
-                            <ul>
-                                <li><p>Наши художники:</p></li>
-                                <li><p>Лосева Екатерина</p></li>
-                                <li><p>Никольская Алиса</p></li>
-                                <li><p>Тарасова Юлия</p></li>
-                            </ul>
-                            <img src="./img/green-card.png" alt="">
-                        </div>
-                        <p>Дизайн: Паршикова Анастасия</p>
-                    </div>
+                </div>
+                <div class="hero__visual" aria-hidden="true">
+                    <span class="hero__orb hero__orb--one"></span>
+                    <span class="hero__orb hero__orb--two"></span>
+                    <img id="MainMaskot" src="./img/head-img.png" id="MainMaskot" alt="" width="700" height="560">
                 </div>
             </div>
-            
         </section>
-        <section id="forparents">
-            <h2 class="orange">Для родителей</h2>
-            <p class="p-24">Мы искренне рады и благодарим Вас за то, что выбрали наше издание!</p>
-            <p class="p-24">
-                <span class="orange">Наша цель – помочь Вашим детям научиться грамотному использованию Интернета и его возможностей.</span>
-                <br>В данном журнале мы постарались охватить все сложные, волнующие, требующие особого внимания или подробнейшего разъяснения вопросы. Здесь мы просто и понятно объясним непростые, но очень важные темы, поможем предостеречь юных исследователей сети от опасностей.
-            </p>
-            <p class="p-24">Надеемся, что мы сможем поддержать Вас и Вашего ребёнка! Ждём Ваших отзывов и предложений!</p>
+
+        <section class="section audience-section" aria-labelledby="audience-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Начните с нужного раздела</p>
+                    <h2 id="audience-title">Материалы для каждой аудитории</h2>
+                    <p>Одна тема может требовать разных слов и форматов. Поэтому для детей, родителей и педагогов мы подготовили отдельные маршруты.</p>
+                </div>
+                <div class="audience-grid">
+                    <a class="audience-card audience-card--kids" href="./materials.html">
+                        <span class="audience-card__number">01</span>
+                        <div><p class="audience-card__label">Детям</p><h3>Учись защищать себя в сети</h3><p>Короткие статьи, жизненные ситуации и простые правила без запугивания.</p></div>
+                        <span class="audience-card__link">Перейти в раздел <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="audience-card audience-card--parents" href="./forParents.html">
+                        <span class="audience-card__number">02</span>
+                        <div><p class="audience-card__label">Родителям</p><h3>Говорите о сложном спокойно</h3><p>Практические рекомендации, чек-листы и идеи для разговора с ребёнком.</p></div>
+                        <span class="audience-card__link">Перейти в раздел <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="audience-card audience-card--teachers" href="./entertainment.html#teachers">
+                        <span class="audience-card__number">03</span>
+                        <div><p class="audience-card__label">Педагогам</p><h3>Проводите занятия увереннее</h3><p>Презентации, конспекты и материалы для уроков цифровой грамотности.</p></div>
+                        <span class="audience-card__link">Открыть материалы <span aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--soft" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-heading section-heading--row">
+                    <div><p class="eyebrow">Актуальные темы</p><h2 id="featured-title">С чего начать</h2></div>
+                    <a class="text-link" href="./materials.html">Все материалы <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <div class="featured-card__visual featured-card__visual--orange"><img src="./img/orange-anfas.png" alt="Оранжевый персонаж Мониторчиков" loading="lazy"></div>
+                        <div class="featured-card__body"><div class="meta-row"><span>Детям</span><span>5 минут</span></div><h3>Если тебе пишет незнакомец</h3><p>Как заметить тревожные сигналы, защитить личные данные и вовремя обратиться за помощью.</p><a href="./forkids/material-6.html">Читать материал <span aria-hidden="true">→</span></a></div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="featured-card__visual featured-card__visual--green"><img src="./img/green-masc.png" alt="Зелёный персонаж Мониторчиков" loading="lazy"></div>
+                        <div class="featured-card__body"><div class="meta-row"><span>Детям</span><span>6 минут</span></div><h3>Пароль — ключ от аккаунта</h3><p>Каким бывает надёжный пароль и почему коды из сообщений нельзя отправлять другим.</p><a href="./forkids/material-7.html">Читать материал <span aria-hidden="true">→</span></a></div>
+                    </article>
+                    <article class="featured-card">
+                        <div class="featured-card__visual featured-card__visual--purple"><img src="./img/purple-1.png" alt="Фиолетовый персонаж Мониторчиков" loading="lazy"></div>
+                        <div class="featured-card__body"><div class="meta-row"><span>Родителям</span><span>8 минут</span></div><h3>Экранное время без ссор</h3><p>Как договориться о правилах использования гаджетов и сохранить доверие в семье.</p><a href="./forParents/material-6.html">Читать материал <span aria-hidden="true">→</span></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section principles" aria-labelledby="principles-title">
+            <div class="container principles__grid">
+                <div class="principles__intro">
+                    <p class="eyebrow">Коротко о главном</p><h2 id="principles-title">Пять опор цифровой безопасности</h2>
+                    <p>Эти правила помогают принимать более безопасные решения даже в незнакомой ситуации.</p>
+                    <a class="button button--secondary" href="./entertainment.html">Закрепить знания в игре</a>
+                </div>
+                <ol class="principles__list">
+                    <li><span>01</span><div><strong>Защищайте личное</strong><p>Адрес, пароли, коды и документы не должны попадать в чужие руки.</p></div></li>
+                    <li><span>02</span><div><strong>Проверяйте сообщения</strong><p>Срочность, подарки и просьбы о коде часто используются для обмана.</p></div></li>
+                    <li><span>03</span><div><strong>Думайте перед публикацией</strong><p>Информация в интернете может сохраниться надолго и выйти за пределы круга друзей.</p></div></li>
+                    <li><span>04</span><div><strong>Сохраняйте доказательства</strong><p>При травле или угрозах сделайте скриншот и заблокируйте обидчика.</p></div></li>
+                    <li><span>05</span><div><strong>Обращайтесь за помощью</strong><p>Странную или пугающую ситуацию не нужно решать в одиночку.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section play-section" aria-labelledby="play-title">
+            <div class="container play-card">
+                <div class="play-card__content">
+                    <p class="eyebrow">Учимся через практику</p><h2 id="play-title">Игры, викторины и материалы для занятий</h2>
+                    <p>Проверьте знания в интерактивной викторине, скачайте раскраски или проведите тематический урок.</p>
+                    <div class="hero__actions"><a class="button button--light" href="./entertainment.html">Перейти к играм</a><a class="button button--ghost" href="./entertainment.html#teachers">Материалы педагогам</a></div>
+                </div>
+                <div class="play-card__visual"><img src="./img/game-2.jpg" alt="Пример обучающей игры о надёжных паролях" loading="lazy"></div>
+            </div>
+        </section>
+
+        <section class="section section--soft" id="about" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div><p class="eyebrow">О проекте</p><h2 id="about-title">Цифровая грамотность — навык для всей семьи</h2></div>
+                <div class="about-grid__content">
+                    <p class="about-grid__lead">«Мониторчики» — образовательный проект, который помогает детям и взрослым увереннее ориентироваться в цифровой среде.</p>
+                    <p>Мы переводим сложные темы на понятный язык, создаём обучающие материалы и игровые форматы для дома и занятий. Проект объединяет профилактику цифровых рисков, развитие критического мышления и поддержку доверительного разговора между детьми и взрослыми.</p>
+                    <div class="project-values"><div><strong>Понятно</strong><span>Объясняем без перегруженных терминов</span></div><div><strong>Практично</strong><span>Предлагаем конкретные действия</span></div><div><strong>Бережно</strong><span>Не запугиваем и поддерживаем диалог</span></div></div>
+                    <dl class="project-facts" aria-label="Проект в цифрах">
+                        <div><dt>3</dt><dd>аудитории: дети, родители и педагоги</dd></div>
+                        <div><dt>19</dt><dd>практических материалов в библиотеке</dd></div>
+                        <div><dt>1</dt><dd>общая цель — безопаснее действовать в сети</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section" id="team" aria-labelledby="team-title">
+            <div class="container">
+                <div class="section-heading section-heading--row">
+                    <div><p class="eyebrow">Команда</p><h2 id="team-title">Проект создаётся на стыке трёх направлений</h2></div>
+                    <p class="section-heading__note">Персональный состав и привлечённые эксперты будут опубликованы после организационного утверждения.</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card"><span aria-hidden="true">01</span><h3>Редакция</h3><p>Формирует темы, адаптирует сложные понятия и следит за ясностью материалов для каждой аудитории.</p></article>
+                    <article class="team-card"><span aria-hidden="true">02</span><h3>Методическая работа</h3><p>Развивает сценарии занятий, памятки и игровые форматы, которые можно применять дома и в классе.</p></article>
+                    <article class="team-card"><span aria-hidden="true">03</span><h3>Дизайн и разработка</h3><p>Отвечает за доступность, визуальный язык, интерактивные задания и техническую работу сайта.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partners-section" id="partners" aria-labelledby="partners-title">
+            <div class="container partners-layout">
+                <div class="partners-copy">
+                    <p class="eyebrow">Партнёрам и стейкхолдерам</p>
+                    <h2 id="partners-title">Открыты к содержательному сотрудничеству</h2>
+                    <p>Проект может развиваться совместно с образовательными учреждениями, экспертными организациями и социальными инициативами. Мы готовы обсуждать экспертизу материалов, совместные занятия, информационную поддержку и специальные проекты.</p>
+                    <div class="partner-status"><span aria-hidden="true"></span><p><strong>Партнёрский контур формируется.</strong> Логотипы и наименования организаций появятся здесь только после официального подтверждения сотрудничества.</p></div>
+                </div>
+                <div class="partner-slots" aria-label="Направления партнёрства">
+                    <div><span class="partner-slots__mark" aria-hidden="true">ОБ</span><strong>Образовательные организации</strong><p>Апробация материалов и совместные просветительские программы.</p></div>
+                    <div><span class="partner-slots__mark" aria-hidden="true">ЭК</span><strong>Экспертные сообщества</strong><p>Проверка рекомендаций и развитие методической базы.</p></div>
+                    <div><span class="partner-slots__mark" aria-hidden="true">СИ</span><strong>Социальные инициативы</strong><p>Информационные кампании и расширение аудитории проекта.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section social-cta" id="contacts" aria-labelledby="social-title">
+            <div class="container social-cta__inner">
+                <div><p class="eyebrow">Контакты проекта</p><h2 id="social-title">Связаться с командой «Мониторчиков»</h2><p>Новости и новые материалы публикуем в сообществах проекта. По вопросам сотрудничества можно написать в личные сообщения любой из площадок.</p></div>
+                <div class="social-cta__links"><a href="https://vk.com/izdaniemonitorchiki" target="_blank" rel="noopener noreferrer"><img src="./img/VK-Negative-blue.svg" alt="" aria-hidden="true"><span><small>Сообщество и сообщения</small>ВКонтакте</span></a><a href="https://t.me/izdaniemonitochiki" target="_blank" rel="noopener noreferrer"><img src="./img/Telegram-Negative-blue.svg" alt="" aria-hidden="true"><span><small>Канал проекта</small>Telegram</span></a></div>
+            </div>
         </section>
     </main>
-    <footer>
-        <div class="container white flex-column">
-            <div class="footer-div">
-                <a class="footer-a white" href="https://vk.com/izdaniemonitorchiki"><img src="/img/VK-Negative.svg" alt="vk-image">Вконтакте</a>
-                <a class="footer-a white" href="https://t.me/izdaniemonitochiki"><img src="/img/Telegram-Negative.svg" alt="tg-image">Телеграм</a>
+
+    <footer class="site-footer site-footer--official">
+        <div class="container site-footer__grid">
+            <div>
+                <a class="brand brand--footer" href="/">
+                    <span class="brand__mark" aria-hidden="true">М</span>
+                    <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+                </a>
+                <p>Образовательный информационный проект для детей, родителей и педагогов.</p>
             </div>
-            <p class="t-center">МОНИТОРЧИКИ: Детское электронное издание о безопасности в сети Интернет</p>
+            <div>
+                <p class="site-footer__label">Разделы</p>
+                <nav class="site-footer__nav" aria-label="Навигация в подвале">
+                    <a href="/materials.html">Детям</a>
+                    <a href="/forParents.html">Родителям</a>
+                    <a href="/entertainment.html#teachers">Педагогам</a>
+                    <a href="/entertainment.html">Игры</a>
+                    <a href="/index.html#about">О проекте</a>
+                </nav>
+            </div>
+            <div class="site-footer__status">
+                <p class="site-footer__label">Официальная информация</p>
+                <p>Проект находится на этапе организационного развития. Сведения об организации, команде и подтверждённых партнёрах публикуются открыто после согласования.</p>
+                <div class="site-footer__contacts">
+                    <a href="/index.html#partners">Партнёрам</a>
+                    <a href="/index.html#contacts">Контакты</a>
+                    <a href="https://vk.com/izdaniemonitorchiki" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+                    <a href="https://t.me/izdaniemonitochiki" target="_blank" rel="noopener noreferrer">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="container site-footer__bottom">
+            <p>© 2026 «Мониторчики»</p>
+            <p>Материалы носят образовательный и информационный характер</p>
         </div>
     </footer>
-
     <script src="./script.js"></script>
 </body>
-</html> 
+</html>

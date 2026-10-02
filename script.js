@@ -1,142 +1,252 @@
-document.querySelector(".burger").addEventListener("click", function () {
-  this.classList.toggle("active");
-  document.querySelector(".navigation").classList.toggle("open");
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.navigation');
+const mobileNavigation = window.matchMedia('(max-width: 1275px)');
+const dropdownTriggers = [];
+
+const closeDropdowns = () => {
+    dropdownTriggers.forEach(({ dropdown, trigger }) => {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+    });
+};
+
+document.querySelectorAll('.navigation .dropdown').forEach((dropdown) => {
+    const trigger = dropdown.querySelector('.spesical');
+
+    if (!trigger) {
+        return;
+    }
+
+    trigger.setAttribute('role', 'button');
+    trigger.setAttribute('tabindex', '0');
+    trigger.setAttribute('aria-expanded', 'false');
+    dropdownTriggers.push({ dropdown, trigger });
+
+    const toggleDropdown = () => {
+        const isOpen = dropdown.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    trigger.addEventListener('click', () => {
+        if (mobileNavigation.matches) {
+            toggleDropdown();
+        }
+    });
+
+    trigger.addEventListener('keydown', (event) => {
+        if (mobileNavigation.matches && (event.key === 'Enter' || event.key === ' ')) {
+            event.preventDefault();
+            toggleDropdown();
+        }
+    });
 });
 
-document.querySelectorAll(".navigation a").forEach((item) => {
-  item.addEventListener("click", function () {
-    document.querySelector(".burger").classList.remove("active");
-    document.querySelector(".navigation").classList.remove("open");
-  });
-});
+if (burger && navigation) {
+    const closeNavigation = () => {
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Открыть меню');
+        navigation.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        closeDropdowns();
+    };
 
-const modal1 = document.getElementById("modal1");
-const openModalBtn1 = document.getElementById("openModalBtn1");
-const closeModalBtn1 = document.getElementById("closeModalBtn1");
-const prevBtn1 = document.getElementById("prevBtn1");
-const nextBtn1 = document.getElementById("nextBtn1");
-const slider1 = document.getElementById("slider1");
-const slides1 = document.querySelectorAll(".slide1");
+    burger.addEventListener('click', function () {
+        const isOpen = navigation.classList.toggle('open');
+        this.classList.toggle('active', isOpen);
+        this.setAttribute('aria-expanded', String(isOpen));
+        this.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+        document.body.classList.toggle('menu-open', isOpen);
 
-let currentIndex = 0;
+        if (!isOpen) {
+            closeDropdowns();
+        }
+    });
 
-openModalBtn1.addEventListener("click", () => {
-  modal1.showModal();
-  updateSlider();
-});
+    document.querySelectorAll('.navigation a').forEach((item) => {
+        item.addEventListener('click', closeNavigation);
+    });
 
-closeModalBtn1.addEventListener("click", () => {
-  modal1.close();
-});
-
-prevBtn1.addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : slides1.length - 1;
-  updateSlider();
-});
-
-nextBtn1.addEventListener("click", () => {
-  currentIndex = currentIndex < slides1.length - 1 ? currentIndex + 1 : 0;
-  updateSlider();
-});
-
-function updateSlider() {
-  const offset = -currentIndex * 100;
-  slider1.style.transform = `translateX(${offset}%)`;
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navigation.classList.contains('open')) {
+            closeNavigation();
+            burger.focus();
+        }
+    });
 }
 
-const modal2 = document.getElementById("modal2");
-const openModalBtn2 = document.getElementById("openModalBtn2");
-const closeModalBtn2 = document.getElementById("closeModalBtn2");
-const prevBtn2 = document.getElementById("prevBtn2");
-const nextBtn2 = document.getElementById("nextBtn2");
-const slider2 = document.getElementById("slider2");
-const slides2 = document.querySelectorAll(".slide2");
+mobileNavigation.addEventListener('change', closeDropdowns);
 
-openModalBtn2.addEventListener("click", () => {
-  modal2.showModal();
-  updateSlider2();
+document.querySelectorAll('dialog[id^="modal"]').forEach((modal) => {
+    const number = modal.id.replace('modal', '');
+    const openButton = document.getElementById(`openModalBtn${number}`);
+    const closeButton = document.getElementById(`closeModalBtn${number}`);
+    const previousButton = document.getElementById(`prevBtn${number}`);
+    const nextButton = document.getElementById(`nextBtn${number}`);
+    const slider = document.getElementById(`slider${number}`);
+    const slides = slider ? Array.from(slider.children) : [];
+
+    if (!openButton || !closeButton || !previousButton || !nextButton || !slider || !slides.length) {
+        return;
+    }
+
+    let currentIndex = 0;
+
+    const updateSlider = () => {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    openButton.addEventListener('click', () => {
+        modal.showModal();
+        updateSlider();
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.close();
+    });
+
+    previousButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    });
 });
 
-closeModalBtn2.addEventListener("click", () => {
-  modal2.close();
+document.querySelectorAll('[data-filter-grid]').forEach((grid) => {
+    const cards = Array.from(grid.querySelectorAll('[data-tags]'));
+    const section = grid.closest('.catalog-section');
+    const filters = section ? Array.from(section.querySelectorAll('[data-filter]')) : [];
+    const count = section?.querySelector('[data-visible-count]');
+    const emptyState = section?.querySelector('[data-filter-empty]');
+
+    if (!cards.length || !filters.length) {
+        return;
+    }
+
+    filters.forEach((filterButton) => {
+        filterButton.addEventListener('click', () => {
+            const selectedFilter = filterButton.dataset.filter;
+            let visibleCount = 0;
+
+            filters.forEach((button) => {
+                const isActive = button === filterButton;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            cards.forEach((card) => {
+                const tags = (card.dataset.tags || '').split(/\s+/);
+                const isVisible = selectedFilter === 'all' || tags.includes(selectedFilter);
+                card.hidden = !isVisible;
+
+                if (isVisible) {
+                    visibleCount += 1;
+                }
+            });
+
+            if (count) {
+                count.textContent = String(visibleCount);
+            }
+
+            if (emptyState) {
+                emptyState.hidden = visibleCount !== 0;
+            }
+        });
+    });
+
+    filters.forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.classList.contains('is-active')));
+    });
 });
 
-prevBtn2.addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : slides2.length - 1;
-  updateSlider2();
-});
+const articleMatch = window.location.pathname.match(/^\/(forkids|forParents)\/material-\d+\.html$/i);
 
-nextBtn2.addEventListener("click", () => {
-  currentIndex = currentIndex < slides2.length - 1 ? currentIndex + 1 : 0;
-  updateSlider2();
-});
+if (articleMatch) {
+    const isForParents = articleMatch[1].toLowerCase() === 'forparents';
+    const audienceLabel = isForParents ? 'Для родителей' : 'Для детей';
+    const catalogHref = isForParents ? '../forParents.html' : '../materials.html';
+    const main = document.querySelector('main');
+    const article = main?.querySelector(':scope > section');
 
-function updateSlider2() {
-  const offset = -currentIndex * 100;
-  slider2.style.transform = `translateX(${offset}%)`;
+    document.body.classList.add('article-page', isForParents ? 'article-page--parents' : 'article-page--kids');
+
+    if (!document.querySelector('link[rel="icon"]')) {
+        const favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        favicon.href = '../img/favicon.svg';
+        favicon.type = 'image/svg+xml';
+        document.head.append(favicon);
+    }
+
+    const progress = document.createElement('div');
+    progress.className = 'reading-progress';
+    progress.setAttribute('aria-hidden', 'true');
+    progress.innerHTML = '<span></span>';
+    document.body.prepend(progress);
+
+    const updateReadingProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, (window.scrollY / scrollable) * 100) : 0;
+        progress.firstElementChild.style.width = `${percent}%`;
+    };
+
+    window.addEventListener('scroll', updateReadingProgress, { passive: true });
+    window.addEventListener('resize', updateReadingProgress);
+    updateReadingProgress();
+
+    if (main && article) {
+        const title = article.querySelector('h1');
+        const words = article.textContent.trim().split(/\s+/).length;
+        const readingTime = Math.max(2, Math.ceil(words / 180));
+
+        const breadcrumbs = document.createElement('nav');
+        breadcrumbs.className = 'article-breadcrumbs';
+        breadcrumbs.setAttribute('aria-label', 'Хлебные крошки');
+        breadcrumbs.innerHTML = `<a href="../index.html">Главная</a><span aria-hidden="true">/</span><a href="${catalogHref}">${audienceLabel}</a><span aria-hidden="true">/</span><span aria-current="page">Статья</span>`;
+        main.insertBefore(breadcrumbs, main.firstElementChild);
+
+        const meta = document.createElement('div');
+        meta.className = 'article-meta';
+        meta.innerHTML = `<span>${audienceLabel}</span><span>${readingTime} мин чтения</span><span>Интернет-безопасность</span>`;
+        article.insertBefore(meta, article.firstElementChild);
+
+        if (title && !title.id) {
+            title.id = 'article-title';
+            article.setAttribute('aria-labelledby', title.id);
+        }
+    }
 }
 
-const modal3 = document.getElementById("modal3");
-const openModalBtn3 = document.getElementById("openModalBtn3");
-const closeModalBtn3 = document.getElementById("closeModalBtn3");
-const prevBtn3 = document.getElementById("prevBtn3");
-const nextBtn3 = document.getElementById("nextBtn3");
-const slider3 = document.getElementById("slider3");
-const slides3 = document.querySelectorAll(".slide3");
+// КОНФЕТИ!!! Что может быть веселее чем конфети?
 
-openModalBtn3.addEventListener("click", () => {
-  modal3.showModal();
-  updateSlider3();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const maskot = document.getElementById('MainMaskot');
+      if (!maskot) {
+        console.error('Элемент #MainMaskot не найден в DOM');
+        return;
+      }
+    // Вешаем обработчик клика
+    maskot.addEventListener('click', (e) => {
+        
+      const el = e.currentTarget; // сама картинка
+
+      // Координаты центра картинки
+      const rect = el.getBoundingClientRect();
+      const x = (rect.left + rect.width / 2) / window.innerWidth;
+      const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+      // Запускаем конфетти
+      confetti({
+        particleCount: 120,
+        spread: 80,
+        startVelocity: 40,
+        origin: { x, y },
+        colors: ['#ff6b6b', '#feca57', '#48dbfb', '#1dd1a1', '#f368e0']
+      });
+    });
 });
-
-closeModalBtn3.addEventListener("click", () => {
-  modal3.close();
-});
-
-prevBtn3.addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : slides3.length - 1;
-  updateSlider3();
-});
-
-nextBtn3.addEventListener("click", () => {
-  currentIndex = currentIndex < slides3.length - 1 ? currentIndex + 1 : 0;
-  updateSlider3();
-});
-
-function updateSlider3() {
-  const offset = -currentIndex * 100;
-  slider3.style.transform = `translateX(${offset}%)`;
-}
-
-const modal4 = document.getElementById("modal4");
-const openModalBtn4 = document.getElementById("openModalBtn4");
-const closeModalBtn4 = document.getElementById("closeModalBtn4");
-const prevBtn4 = document.getElementById("prevBtn4");
-const nextBtn4 = document.getElementById("nextBtn4");
-const slider4 = document.getElementById("slider4");
-const slides4 = document.querySelectorAll(".slide4");
-
-openModalBtn4.addEventListener("click", () => {
-  modal4.showModal();
-  updateSlider4();
-});
-
-closeModalBtn4.addEventListener("click", () => {
-  modal4.close();
-});
-
-prevBtn4.addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : slides4.length - 1;
-  updateSlider4();
-});
-
-nextBtn4.addEventListener("click", () => {
-  currentIndex = currentIndex < slides4.length - 1 ? currentIndex + 1 : 0;
-  updateSlider4();
-});
-2;
-
-function updateSlider4() {
-  const offset = -currentIndex * 100;
-  slider4.style.transform = `translateX(${offset}%)`;
-}
