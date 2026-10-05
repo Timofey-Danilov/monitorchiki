@@ -13,25 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/quiz.css"><link rel="stylesheet" href="./css/dino.css"><link rel="stylesheet" href="./css/activity.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
 </head>
 <body class="activity-page">
     <a class="skip-link" href="#main-content">Перейти к содержанию</a>
     <header class="site-header">
         <div class="container site-header__inner">
-            <a class="brand" href="/" aria-label="Мониторчики — главная страница">
-                <span class="brand__mark" aria-hidden="true">М</span>
-                <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
-            </a>
+            <a class="brand" href="/" aria-label="Мониторчики — главная страница"><span class="brand__mark" aria-hidden="true">М</span><span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span></a>
             <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
-            <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация">
-                <a href="./materials.html">Детям</a>
-                <a href="./forParents.html">Родителям</a>
-                <a href="./entertainment.html#teachers">Педагогам</a>
-                <a href="./entertainment.html">Игры</a>
-                <a href="./#about">О проекте</a>
-                <a href="./#partners">Партнёрам</a>
-            </nav>
+            <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация"><a href="./materials.html">Детям</a><a href="./forParents.html">Родителям</a><a href="#teachers">Педагогам</a><a class="is-current" href="./entertainment.html" aria-current="page">Игры</a><a href="./#about">О проекте</a></nav>
         </div>
     </header>
 
@@ -39,7 +28,7 @@
         <section class="activity-hero">
             <div class="container activity-hero__grid">
                 <div><p class="eyebrow">Учимся через практику</p><h1>Играй, исследуй и запоминай</h1><p>Викторины и задания помогают применить правила цифровой безопасности в ситуациях, похожих на настоящие.</p><div class="hero__actions"><a class="button button--primary" href="#quiz">Начать с викторины</a><a class="button button--secondary" href="#teachers">Материалы педагогам</a></div></div>
-                <div  class="activity-hero__visual"><video preload="metadata" loop autoplay muted playsinline aria-label="Анимация персонажа Мониторчиков"><source src="./video/orange_music.mp4" type="video/mp4"></video></div>
+                <div class="activity-hero__visual"><video preload="metadata" loop autoplay muted playsinline aria-label="Анимация персонажа Мониторчиков"><source src="./video/orange_music.mp4" type="video/mp4"></video></div>
             </div>
         </section>
 
@@ -61,8 +50,8 @@
             <div class="container game-section">
                 <div class="game-container" id="gameContainer">
                     <div class="game-toolbar"><span>Тренажёр стойкости пароля</span><button class="fullscreen-btn" type="button" onclick="toggleFullscreen()">На весь экран</button></div>
-                    <div class="game-wrapper" id="gameWrapper">
-                        <div id="startScreen"><h3>Сколько продержится пароль?</h3><p>Введи тестовый вариант и начни игру. Пробел или стрелка вверх — прыжок, стрелка вниз — пригнуться.</p><label for="passwordInput">Тестовый пароль</label><div class="game-start-controls"><input id="passwordInput" type="text" data-ddg-inputtype="unknown" placeholder="Например: Kot!More#27"><button type="button" onclick="startGame()">Начать игру</button></div></div>
+                    <div class="game-wrapper" id="gameWrapper" tabindex="0">
+                        <div id="startScreen"><h3>Сколько продержится пароль?</h3><p>Введи тестовый вариант и начни игру. Пробел или стрелка вверх — прыжок, стрелка вниз — пригнуться.</p><label for="passwordInput">Тестовый пароль</label><div class="game-start-controls"><input id="passwordInput" type="text" autocomplete="off" placeholder="Например: Kot!More#27"><button type="button" onclick="startGame()">Начать игру</button></div></div>
                         <div id="terminal" style="display:none;"><div class="terminal-stats"><span>Пароль: <strong id="password"></strong></span><span>Подбор: <strong id="hack"></strong></span><span>Очки: <strong id="score">0</strong></span></div><div id="log" aria-live="polite"></div></div>
                         <canvas id="game" style="display:none;" aria-label="Игровое поле"></canvas>
                         <div id="gameControls" style="display:none;"><button type="button" onclick="jump()">Прыжок</button><button type="button" onmousedown="duck(true)" onmouseup="duck(false)" ontouchstart="duck(true)" ontouchend="duck(false)">Пригнуться</button><button type="button" onclick="resetGame()">Сбросить</button><button id="restartBtn" type="button" onclick="restartGame()" style="display:none;">Играть снова</button></div>

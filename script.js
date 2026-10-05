@@ -220,33 +220,3 @@ if (articleMatch) {
         }
     }
 }
-
-// КОНФЕТИ!!! Что может быть веселее чем конфети?
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const maskot = document.getElementById('MainMaskot');
-      if (!maskot) {
-        console.error('Элемент #MainMaskot не найден в DOM');
-        return;
-      }
-    // Вешаем обработчик клика
-    maskot.addEventListener('click', (e) => {
-        
-      const el = e.currentTarget; // сама картинка
-
-      // Координаты центра картинки
-      const rect = el.getBoundingClientRect();
-      const x = (rect.left + rect.width / 2) / window.innerWidth;
-      const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-      // Запускаем конфетти
-      confetti({
-        particleCount: 120,
-        spread: 80,
-        startVelocity: 40,
-        origin: { x, y },
-        colors: ['#ff6b6b', '#feca57', '#48dbfb', '#1dd1a1', '#f368e0']
-      });
-    });
-});
