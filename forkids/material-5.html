@@ -32,31 +32,25 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="container header">
-            <div>
-                <p class="site-title white">Мониторчики</p>
-                <p class="p-16 white">Детское электронное издание</p>
-            </div>
-            <nav class="navigation">
-                <div>
-                    <a class="p-26 white" href="/">О нас</a>
-                </div>
-                <div class="dropdown">
-                    <p class="p-26 white spesical" >Полезные материалы</p>
-                    <ul class="dropdown-list">
-                        <li><a href="/forParents.html">Для родителей</a></li>
-                        <li><a href="/materials.html">Для детей</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <a class="p-26 white" href="/entertainment.html">Развлечения</a>
-                </div>
+<body class="home-page article-page article-page--kids">
+    <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/">
+                <span class="brand__mark" aria-hidden="true">М</span>
+                <span class="brand__text">
+                    <img class="brand__logo" src="../img/brand-logo.svg" alt="Мониторчики" background-size="cover">
+                    <small>О цифровой безопасности</small>
+                </span>
+            </a>
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
+                  <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация">
+                <a href="../materials.html">Детям</a>
+                <a href="../forParents.html">Родителям</a>
+                <a href="../entertainment.html#teachers">Педагогам</a>
+                <a href="../entertainment.html">Игры</a>
+                <a href="../#about">О проекте</a>
+                <a href="../#partners">Партнёрам</a>
             </nav>
-            <div class="burger">
-                <span></span>
-            </div>
         </div>
     </header>
     <main class="container">

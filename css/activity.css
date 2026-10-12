@@ -7,7 +7,7 @@
     --home-green-dark: #38651f;
     --home-orange: #d96d2d;
     --home-purple: #6655ad;
-    --home-radius: 16px;
+    --home-radius: 24px;
     background: #fff;
     color: var(--home-ink);
     font-family: "Geologica", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -95,7 +95,7 @@
 .activity-hero {
     overflow: hidden;
     padding: 70px 0 60px;
-    background: #fff6ef;
+    background: linear-gradient(145deg, #fff9f4 0%, #fff 58%, #f4f1fb 100%);
 }
 
 .activity-hero__grid {
@@ -116,7 +116,7 @@
     min-height: 390px;
     display: grid;
     place-items: center;
-    border-radius: 70px 20px 20px 20px;
+    border-radius: 46% 54% 45% 55% / 55% 45% 55% 45%;
     background: #fce9dc;
 }
 
@@ -216,7 +216,7 @@
     border: 1px solid var(--home-line);
     border-radius: 28px;
     background: #fff;
-    box-shadow: none;
+    box-shadow: 0 18px 50px rgba(23, 33, 43, .07);
 }
 
 .activity-page .quiz-meta {

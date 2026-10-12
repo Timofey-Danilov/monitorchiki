@@ -33,15 +33,19 @@
         "sameAs": ["https://vk.com/izdaniemonitorchiki", "https://t.me/izdaniemonitochiki"]
     }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
 </head>
 <body class="home-page">
     <a class="skip-link" href="#main-content">Перейти к содержанию</a>
 
     <header class="site-header">
         <div class="container site-header__inner">
-            <a class="brand" href="/" aria-label="Мониторчики — главная страница">
+            <a class="brand" href="/">
                 <span class="brand__mark" aria-hidden="true">М</span>
-                <span class="brand__text"><strong>Мониторчики</strong><small>О цифровой безопасности</small></span>
+                <span class="brand__text">
+                    <img class="brand__logo" src="../img/brand-logo.svg" alt="Мониторчики" background-size="cover">
+                    <small>О цифровой безопасности</small>
+                </span>
             </a>
             <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span></button>
             <nav class="navigation site-navigation" id="main-navigation" aria-label="Основная навигация">
@@ -60,7 +64,7 @@
             <div class="container hero__grid">
                 <div class="hero__content">
                     <p class="eyebrow">Образовательный проект</p>
-                    <h1>Безопасный интернет начинается с <span>понятного разговора</span></h1>
+                    <h1>Безопасный интернет начинается с понятного разговора</h1>
                     <p class="hero__lead">Помогаем детям, родителям и педагогам разбираться в цифровом мире — спокойно, практично и без сложных терминов.</p>
                     <div class="hero__actions">
                         <a class="button button--primary" href="./materials.html">Материалы для детей</a>
@@ -73,7 +77,9 @@
                     </ul>
                 </div>
                 <div class="hero__visual" aria-hidden="true">
-                    <img src="./img/head-img.png" alt="" width="700" height="560">
+                    <span class="hero__orb hero__orb--one"></span>
+                    <span class="hero__orb hero__orb--two"></span>
+                    <img id="MainMaskot" src="./img/head-img.png" id="MainMaskot" alt="" width="700" height="560">
                 </div>
             </div>
         </section>
@@ -88,19 +94,16 @@
                 <div class="audience-grid">
                     <a class="audience-card audience-card--kids" href="./materials.html">
                         <span class="audience-card__number">01</span>
-                        <img class="audience-card__mascot" src="./img/orange-anfas.png" alt="" aria-hidden="true" loading="lazy">
                         <div><p class="audience-card__label">Детям</p><h3>Учись защищать себя в сети</h3><p>Короткие статьи, жизненные ситуации и простые правила без запугивания.</p></div>
                         <span class="audience-card__link">Перейти в раздел <span aria-hidden="true">→</span></span>
                     </a>
                     <a class="audience-card audience-card--parents" href="./forParents.html">
                         <span class="audience-card__number">02</span>
-                        <img class="audience-card__mascot" src="./img/green-masc.png" alt="" aria-hidden="true" loading="lazy">
                         <div><p class="audience-card__label">Родителям</p><h3>Говорите о сложном спокойно</h3><p>Практические рекомендации, чек-листы и идеи для разговора с ребёнком.</p></div>
                         <span class="audience-card__link">Перейти в раздел <span aria-hidden="true">→</span></span>
                     </a>
                     <a class="audience-card audience-card--teachers" href="./entertainment.html#teachers">
                         <span class="audience-card__number">03</span>
-                        <img class="audience-card__mascot" src="./img/purple-1.png" alt="" aria-hidden="true" loading="lazy">
                         <div><p class="audience-card__label">Педагогам</p><h3>Проводите занятия увереннее</h3><p>Презентации, конспекты и материалы для уроков цифровой грамотности.</p></div>
                         <span class="audience-card__link">Открыть материалы <span aria-hidden="true">→</span></span>
                     </a>

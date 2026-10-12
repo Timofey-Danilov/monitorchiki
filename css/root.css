@@ -145,18 +145,6 @@ p {
     margin: 0 auto;
 }
 
-header {
-    background-color: var(--green);
-    padding: 15px 0;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    
-}
 
 
 nav {
