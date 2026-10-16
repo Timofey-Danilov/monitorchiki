@@ -922,50 +922,20 @@ footer {
         color: var(--orange) ;
     }
 
-    .navigation {
-        background-color: white;
-        color: #B49AE1;
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 0px;
-        bottom: 0;
-        right: 0;
-        z-index: 40;
-        height: 100%;
-        width: 75%;
-        max-width: 350px;
-        gap: -5px;
-        padding-top: 30px;
-        padding-left: 30px;
-        background-color: var(--white);
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        box-shadow: 15px 0px 20px 6px;
-        animation: burgerAimation 0.4s;
-    }
+ 
     
     .select{
         height: 50px;
     }
 
     .burger {
-        display: flex;
-        position: relative;
-        z-index: 70;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 18px;
+ 
         color: var(--white);
         cursor: pointer;
     }
     
     .burger span {
-        height: 2px;
-        width: 80%;
-        background-color: var(--white);
-        position: relative;
+
         transition: transform 0.3s ease;
     }
     
