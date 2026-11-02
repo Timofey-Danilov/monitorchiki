@@ -51,7 +51,10 @@ if (burger && navigation) {
         closeDropdowns();
     };
 
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function (event) {
+        // Не даём клику на бургер «всплыть» до document
+        event.stopPropagation();
+
         const isOpen = navigation.classList.toggle('open');
         this.classList.toggle('active', isOpen);
         this.setAttribute('aria-expanded', String(isOpen));
@@ -72,6 +75,22 @@ if (burger && navigation) {
             closeNavigation();
             burger.focus();
         }
+    });
+
+    // ✅ Закрытие меню по клику вне его области
+    document.addEventListener('click', (event) => {
+        if (!navigation.classList.contains('open')) {
+            return;
+        }
+
+        const clickedInsideNav = navigation.contains(event.target);
+        const clickedBurger = burger.contains(event.target);
+
+        if (clickedInsideNav || clickedBurger) {
+            return;
+        }
+
+        closeNavigation();
     });
 }
 
